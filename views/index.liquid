@@ -1,14 +1,36 @@
 {% render 'partials/head.liquid' %}
 
-<article>
-  <header>
-    <h1>Hallo</h1>
-    <p>mijn naam is</p>
-  </header>
+ <div class="book">
+      <span class="back"></span>
+      <span class="page1"></span>
+      <span class="page2"></span>
+      <span class="page3">
+        {{ person.name }}
+        <div class="inhoudp3">
+          <p><em>Student Frontend Design and Development</em></p>
+        <img src="assets/IMG_0246.JPG" alt="" width="800" height="800" class="profile-card-img"/>
+        </div>
+      </span>
+      <span class="page4">
+        <dl class="profile-card-example-dl">
+         <dt>Boekenwurm</dt>
+          <dd>📚📚📚</dd>
+        
+          <dt>Amsterdam</dt>
+          <dd>❌❌❌</dd>
+        
+          <dt>Cinephile</dt>
+          <dd>🎬🎬🎬</dd>
 
-  <p>{{ person.name }}</p>
-
-  <footer></footer>
-</article>
+          <p><em>If a book is well written, I always find it too short <br> ~ Jane Austen</em></p>
+        </dl>
+          
+      </span>
+      <span class="front">
+        <header class="front-page-header">
+          {{ person.name }}
+        </header>
+      </span>
+    </article>
 
 {% render 'partials/foot.liquid' %}
