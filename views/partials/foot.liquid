@@ -1,2 +1,10 @@
-  </body>
+<script>
+  let flipCard = document.querySelector('.librarycard');
+  let flipCardInner = document.querySelector('.card-inner');
+
+  flipCard.addEventListener('click', () => {
+    flipCardInner.classList.toggle('flipped');
+  });
+</script>
+</body>
 </html>
