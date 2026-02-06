@@ -1,36 +1,40 @@
 {% render 'partials/head.liquid' %}
-
- <div class="book">
-      <span class="back"></span>
-      <span class="page1"></span>
-      <span class="page2"></span>
-      <span class="page3">
-        {{ person.name }}
-        <div class="inhoudp3">
-          <p><em>Student Frontend Design and Development</em></p>
-        <img src="assets/IMG_0246.JPG" alt="" width="800" height="800" class="profile-card-img"/>
-        </div>
-      </span>
-      <span class="page4">
-        <dl class="profile-card-example-dl">
-         <dt>Boekenwurm</dt>
-          <dd>📚📚📚</dd>
-        
-          <dt>Amsterdam</dt>
-          <dd>❌❌❌</dd>
-        
-          <dt>Cinephile</dt>
-          <dd>🎬🎬🎬</dd>
-
-          <p><em>If a book is well written, I always find it too short <br> ~ Jane Austen</em></p>
-        </dl>
-          
-      </span>
-      <span class="front">
-        <header class="front-page-header">
-          {{ person.name }}
-        </header>
-      </span>
-    </article>
-
+{% comment %} <section class="bookmark"> {% endcomment %}
+  
+<section class="librarycard">
+  <section class="card-inner">
+    <section class="front">
+      <div class="lint"></div>
+      <img src="/assets/IMG_0246 kopie.JPG">
+      <h1>{{ person.name }}</h1>
+      <p>"If a book is well written, I always find it too short" ~Jane Austen</p>
+    </section>
+    <section class="back">
+    <section class="top">
+      <h2>EX LIBRIS</h2>
+      <div class="underline"></div>
+      
+        <h3>FDND</h3>
+    </section >
+      <div class="underline"></div>
+    
+    <section class="data">
+      
+      <div class="filler"></div>
+      <h4 class="info">Information</h4>
+      
+      <h4 class="skill">Skills</h4>
+        <p class="skills-data">{{ person.custom.skills }}</p>
+      <h4 class="birthdate">Birthdate</h4>
+        <p class="bd-data">{{ person.birthdate| date: '%e%q of %B'  }}</p>
+      <h4 class="nickname">Nickname</h4>
+        <p class="nickname-data">{{ person.nickname }}</p>
+      <h4 class="leesdoel">2026 Reading Goal</h4>
+        <p class="lees-data">{{ person.custom.leesdoel }}</p>
+      <h4 class="vakantie">Vacationspot</h4>
+        <p class="vakantie-data">{{ person.custom.vakantiebestemming }}</p>
+      </section>
+    </section>
+  </section>
+</section>
 {% render 'partials/foot.liquid' %}
